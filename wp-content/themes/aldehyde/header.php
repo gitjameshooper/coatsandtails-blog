@@ -23,56 +23,11 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'aldehyde_before' ); ?>
 	
-	<div id="top-bar">
-	<div class="container">
-	
-	<div id="top-search" class="col-md-6">
-	<?php get_search_form(); ?>
-	</div>
-	
-	<div id="social-icons" class="col-md-6">
-			    <?php if ( of_get_option('facebook', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><i class="social-icon icon-facebook-sign"></i></a>
-	             <?php } ?>
-	            <?php if ( of_get_option('twitter', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><i class="social-icon icon-twitter-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('google', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('google', true)); ?>" title="Google Plus" ><i class="social-icon icon-google-plus-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('feedburner', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('feedburner', true)); ?>" title="RSS Feeds" ><i class="social-icon icon-rss-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('pinterest', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('pinterest', true)); ?>" title="Pinterest" ><i class="social-icon icon-pinterest-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('instagram', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><i class="social-icon icon-instagram"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('linkedin', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('linkedin', true)); ?>" title="LinkedIn" ><i class="social-icon icon-linkedin-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('youtube', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('youtube', true)); ?>" title="YouTube" ><i class="social-icon icon-youtube-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('tumblr', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><i class="social-icon icon-tumblr-sign"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('flickr', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('flickr', true)); ?>" title="Flickr" ><i class="social-icon icon-flickr"></i></a>
-	             <?php } ?>
-	             <?php if ( of_get_option('dribble', true) != "") { ?>
-				 <a target="_blank" href="<?php echo esc_url(of_get_option('dribble', true)); ?>" title="Dribbble" ><i class="social-icon icon-dribbble"></i></a>
-	             <?php } ?>
-         
-	</div>
-	
-	</div>
-	</div><!--#top-bar-->
-	<header id="masthead" class="site-header row container" role="banner">
+	  
+	<header class="site-header row" role="banner">
 		<div class="site-branding col-md-4">
 		<?php if((of_get_option('logo', true) != "") && (of_get_option('logo', true) != 1) ) { ?>
-			<h1 class="site-title logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<h1 class="logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<?php
 			echo "<img class='main_logo' src='".of_get_option('logo', true)."' title='".esc_attr(get_bloginfo( 'name','display' ) )."'></a></h1>";	
 			}
@@ -92,7 +47,42 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
           </div>  
 		</nav><!-- #site-navigation -->
-	  </div>	
+	  </div>
+	  <div id="social-icons" class="col-md-6">
+		    <?php if ( of_get_option('facebook', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><i class="social-icon icon-facebook-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('tumblr', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><i class="social-icon icon-tumblr-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('instagram', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><i class="social-icon icon-instagram"></i></a>
+             <?php } ?>
+            <?php if ( of_get_option('twitter', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><i class="social-icon icon-twitter-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('google', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('google', true)); ?>" title="Google Plus" ><i class="social-icon icon-google-plus-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('feedburner', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('feedburner', true)); ?>" title="RSS Feeds" ><i class="social-icon icon-rss-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('pinterest', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('pinterest', true)); ?>" title="Pinterest" ><i class="social-icon icon-pinterest-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('linkedin', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('linkedin', true)); ?>" title="LinkedIn" ><i class="social-icon icon-linkedin-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('youtube', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('youtube', true)); ?>" title="YouTube" ><i class="social-icon icon-youtube-sign"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('flickr', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('flickr', true)); ?>" title="Flickr" ><i class="social-icon icon-flickr"></i></a>
+             <?php } ?>
+             <?php if ( of_get_option('dribble', true) != "") { ?>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('dribble', true)); ?>" title="Dribbble" ><i class="social-icon icon-dribbble"></i></a>
+             <?php } ?> 
+	    </div>
 	</header><!-- #masthead -->
 
 	
