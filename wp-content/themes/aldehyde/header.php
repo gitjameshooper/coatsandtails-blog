@@ -15,6 +15,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="http://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet" type="text/css">
+<link rel="icon" href="https://s3.amazonaws.com/coatandtails/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://s3.amazonaws.com/coatandtails/favicon.ico" type="image/x-icon">
+<meta http-equiv="X-Frame-Options" content="DENY"><link href="http://www.coatandtails.com/index.php" rel="canonical">
 <?php wp_head(); ?>
 </head>
 
@@ -46,21 +48,22 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
           </div>
-          <div class="gray-area"></div>
 		</nav><!-- #site-navigation -->
 	  </div>
 	  <div id="social-icons" class="col-md-6">
+	  	    <a href="http://www.coatandtails.com/cart.php" id="cart_link"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sc-icon.png"></a>
+		    <span class="divider"></span>
 		    <?php if ( of_get_option('facebook', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><i class="social-icon icon-facebook-sign"></i></a>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><img src="https://s3.amazonaws.com/coatandtails/img/facebook.png"></a>
              <?php } ?>
              <?php if ( of_get_option('tumblr', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><i class="social-icon icon-tumblr-sign"></i></a>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><img src="https://s3.amazonaws.com/coatandtails/img/tumblr.png"></a>
              <?php } ?>
              <?php if ( of_get_option('instagram', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><i class="social-icon icon-instagram"></i></a>
+			 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><img src="https://s3.amazonaws.com/coatandtails/img/ig.png"></a>
              <?php } ?>
             <?php if ( of_get_option('twitter', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><i class="social-icon icon-twitter-sign"></i></a>
+			 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><img src="https://s3.amazonaws.com/coatandtails/img/twitter.png"></a>
              <?php } ?>
              <?php if ( of_get_option('google', true) != "") { ?>
 			 <a target="_blank" href="<?php echo esc_url(of_get_option('google', true)); ?>" title="Google Plus" ><i class="social-icon icon-google-plus-sign"></i></a>

@@ -11,8 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">
-	<div class="container">
-	 
+	<div id="footer-container" class="container">
+		<hr class="footer" />
+	 <?php wp_nav_menu( array( 'menu' =>  'footerMenu' ) ); ?>
+	 <hr class="footer" />
+	 <p style="text-align:center;color: #666666;font-size:14px;">Copyright © 2015 Bryce Dishongh. All rights reserved.</p>
 	</div>   
 	</footer><!-- #colophon -->
 	
