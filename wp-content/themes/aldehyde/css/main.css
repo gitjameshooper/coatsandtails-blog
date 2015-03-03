@@ -382,7 +382,7 @@ div.slide-description {
 #content {
   background: white;
   border-top: solid 4px #dfdfdf;
-  padding: none;
+  padding: 0px;
   margin-right: 0px;
   margin-left: 0px;
 }

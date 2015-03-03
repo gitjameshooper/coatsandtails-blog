@@ -1,0 +1,66 @@
+#site-navigation .gray-area{
+	display: none;
+}
+#site-navigation:hover .gray-area{
+	display: none;
+	width: 100%;
+	background: red;
+	height: 100px;
+}
+
+ /*  Custom Styles */
+
+body #page{
+ font-family: "IM Fell English","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+ }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+}
+header.site-header.row {
+	padding: 0 15px;
+	min-height: 70px;
+}
+.site-branding.col-md-4 {
+width: auto;
+}
+#site-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	display: inline-block;
+	background: #ffffff;
+	margin-bottom: 0px;  
+	padding-bottom: 0px;  
+}
+#site-navigation a {
+display: block;
+color: #000;
+text-decoration: none;
+padding: 22.5px 15px;
+font-size: 18px;
+line-height: 25px;
+font-weight: normal;
+}
+ 
+#site-navigation li:hover > a{
+background: #eee;
+border-top:  0;
+padding: 22.5px 15px;
+}
+#site-navigation ul ul li:hover > a {
+background: #eee;
+border-top: none;
+padding: 8px 20px;
+color: black;
+}
+#site-navigation .menu > li > a:after {
+ 
+display: none;
+}
+#site-navigation .current_page_item > a {
+background: none;
+border-top: 0;
+padding: 22.5px 15px;
+}

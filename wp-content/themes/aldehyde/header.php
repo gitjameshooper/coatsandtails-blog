@@ -14,7 +14,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<link href="http://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet" type="text/css">
 <?php wp_head(); ?>
 </head>
 
@@ -45,7 +45,8 @@
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'aldehyde' ); ?>"><?php _e( 'Skip to content', 'aldehyde' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-          </div>  
+          </div>
+          <div class="gray-area"></div>
 		</nav><!-- #site-navigation -->
 	  </div>
 	  <div id="social-icons" class="col-md-6">
