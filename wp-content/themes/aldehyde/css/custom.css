@@ -10,6 +10,10 @@
 
  /*  Custom Styles */
 
+/* body{
+  overflow-x: hidden;
+}
+*/
 body #page{
  font-family: "IM Fell English","Helvetica Neue",Helvetica,Arial,sans-serif !important;
  }
@@ -36,6 +40,16 @@ padding: 0;
 }
 .site-branding.col-md-4 {
 width: auto;
+}
+
+.gray-area{
+	position: absolute;
+	z-index: 1;
+	top: 70px;
+	width: 100%;
+	height: 0px;
+	background: #eee;
+	 
 }
 #menu-header-menu .sub-menu  a[title="submenu-title"] {
 cursor: default;
@@ -103,14 +117,27 @@ display: none;
   clear: left;
     
 }
-#site-navigation ul ul.sub-menu li:nth-child(odd) {
-  float: none;
-  margin-right: 50%;
+#site-navigation ul ul.sub-menu li  {
+  float: left;
+  clear: left;
   }
+ #site-navigation ul#menu-header-menu > li:nth-child(1) ul li:nth-child(odd), #site-navigation ul#menu-header-menu > li:nth-child(2) ul li:nth-child(odd){
+  
+ 	float: none;
+ 	clear: none;
+  margin-right: 50%;
+ }
   
 #site-navigation ul ul.sub-menu a{
   margin: 0;
   font-size: 18px;
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
  }
  
 #site-navigation ul#menu-header-menu >  li.current_page_item > a {
@@ -169,6 +196,8 @@ height: 20px;
 	}
 
 /* Blog Content */
+
+
 #secondary h1.widget-title {
 font-size: 20px;
 font-weight: normal;
@@ -187,7 +216,40 @@ color: #333;
   border-top: 0;
   
 }
+.archive .entry-title a:hover {
+  color: #333;
+}
+.widget_search .search-submit {
+  display: inline-block;
+  padding: 4px 12px;
+  
+}
 
+#commentform input#submit{ 
+background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-radial-gradient(0px 100%, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(100% 100%, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(100% 0px, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(0px 0px, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px);
+  background-origin: padding-box, padding-box, padding-box, padding-box;
+  background-position: 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  border-radius: 6px;
+  border: none;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 23px;
+  margin: 10px 0px;
+  padding: 10px 16px;
+  text-align: right;
+  box-shadow: none;
+
+}
+#commentform input#submit:hover{ 
+   border-color: none;
+   box-shadow:  none;
+}
 
 /* Footer */
 #footer-container {
@@ -274,12 +336,3 @@ footer .copyright{
  
 
 
-.gray-area{
-	position: absolute;
-	z-index: 1;
-	top: 70px;
-	width: 100%;
-	height: 0px;
-	background: #eee;
-	 
-}
