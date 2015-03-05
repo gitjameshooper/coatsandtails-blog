@@ -102,7 +102,6 @@ function aldehyde_scripts() {
 	
 	wp_enqueue_style('aldehyde-nivo-lightbox', get_template_directory_uri()."/css/nivo-lightbox.css" );
 	 
-	wp_enqueue_style( 'aldehyde-modal', get_template_directory_uri()."/css/modal.less" );
 	wp_enqueue_style( 'aldehyde-nivo-lightbox-default-theme', get_template_directory_uri()."/css/themes/default/default.css" );
 	wp_enqueue_style( 'aldehyde-custom-style', get_template_directory_uri()."/css/custom.css", array('aldehyde-layout','aldehyde-fonts') );
 	wp_enqueue_script('aldehyde-timeago', get_template_directory_uri() . '/js/jquery.timeago.js', array('jquery') );

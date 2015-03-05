@@ -6,7 +6,37 @@ jQuery( document ).ready( function( $ ) {
 	},function(){
 		 $('.gray-area').height(0);
 	});
-	$('')
+	$('.sub-menu').append('<div class="cover-banner"><img src="" /></div>');
+	 
+	$('.sub-menu > li > a').each(function(){
+           var title = $(this).attr('title');
+
+           if(title !== undefined && title !== 'contact' && title !== 'submenu-title'){
+           	var extJpg =  title.indexOf('.jpg') > -1;
+           	var extPng =  title.indexOf('.png') > -1;
+           	if(extPng || extJpg)
+           	    
+           		$(this).attr('data-img', title);
+           		$(this).attr('title','');
+           }
+            
+            
+         
+	});
+	 
+
+	$('.sub-menu > li > a').hover(function(){
+
+			if(typeof $(this).attr('data-img') !== "undefined"){
+				  
+				var img_src = $(this).attr('data-img')
+				$(this).parent().parent().find('.cover-banner img').attr('src', img_src);
+				$(this).parent().parent().find('.cover-banner img').show();
+			}
+	}, function(){
+		$(this).parent().parent().find('.cover-banner img').hide();
+   			$(this).parent().parent().find('.cover-banner img').attr('src', '');
+	});
 	// contact form
 	$('a[title="contact"]').click(function(e){
 		e.preventDefault();

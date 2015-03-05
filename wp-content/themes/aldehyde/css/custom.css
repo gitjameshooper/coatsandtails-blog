@@ -139,7 +139,9 @@ display: none;
   color: #333;
   white-space: nowrap;
  }
- 
+a[title="contact"]{
+ 	cursor: pointer;
+ }
 #site-navigation ul#menu-header-menu >  li.current_page_item > a {
 	background: none;
  padding: 22.5px 15px;
@@ -161,6 +163,7 @@ background: #eee !important;
 
 #social-icons{
 	width: auto;
+	  padding-left: 0;
 }
 #social-icons a{
 margin-left: -3px;
@@ -194,6 +197,33 @@ float: left;
 a#cart_link img{
 height: 20px;
 	}
+.cover-banner {
+
+     position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  margin-right: 0;
+}
+.cover-banner img{
+display: none;
+	}
+
+
+@media screen and (max-width: 990px) { 
+ ul#menu-header-menu {
+  
+  margin: 11.25px 0 11.25px -10px;
+  }
+}
+@media screen and (max-width: 1075px) {
+ ul#menu-header-menu > li a{
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 17px;
+  }
+  
+}
 
 /* Blog Content */
 
@@ -242,7 +272,7 @@ background-color: rgba(0, 0, 0, 0);
   font-size: 23px;
   margin: 10px 0px;
   padding: 10px 16px;
-  text-align: right;
+  text-align: center;
   box-shadow: none;
 
 }
@@ -336,3 +366,122 @@ footer .copyright{
  
 
 
+/* Modal */
+
+.modal{
+	 font-family: "IM Fell English","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+ 
+}
+.modal .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+.modal .modal-body {
+  position: relative;
+  padding: 15px;
+  padding-top: 0;
+}
+.modal .modal-body label {
+  text-align: left;
+  font-weight: normal;
+  padding: 0 15px;
+    font-size: 18px;
+  line-height: 25px;
+    padding-top: 7px;
+  color: #333;
+}
+.modal form {
+  margin-bottom: 0;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+ .modal textarea {
+ 
+  height: auto;
+  min-height: 140px;
+}
+.modal .close {
+  float: right;
+    margin-top: -2px;
+    position: absolute;
+    right: 12px;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+.modal h4{
+	text-align: center;
+	font-size: 23px;
+	line-height: 25px;
+}
+.modal .row{
+	margin: 0 -15px;
+}
+.modal .form-control {
+  display: block;
+  width: 100%;
+  height: 39px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.modal .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.modal a.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-radial-gradient(0px 100%, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(100% 100%, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(100% 0px, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px), -webkit-radial-gradient(0px 0px, circle cover, rgb(255, 255, 255) 6px, rgb(0, 0, 0) 6px);
+  background-origin: padding-box, padding-box, padding-box, padding-box;
+  background-position: 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  border-radius: 6px;
+  border: none;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 23px;
+  margin: 10px 0px;
+  padding: 10px 16px;
+  text-align: center;
+  box-shadow: none;
+}
