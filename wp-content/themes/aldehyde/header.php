@@ -126,4 +126,5 @@
 		}
 		?>
 		<div id="content" class="site-content row">
+			<div class="gray-area"></div>
 		<div class="container col-md-12"> 

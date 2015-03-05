@@ -105,7 +105,7 @@ function aldehyde_scripts() {
 	wp_enqueue_style( 'aldehyde-nivo-lightbox-default-theme', get_template_directory_uri()."/css/themes/default/default.css" );
 	wp_enqueue_style( 'aldehyde-custom-style', get_template_directory_uri()."/css/custom.css", array('aldehyde-layout','aldehyde-fonts') );
 	wp_enqueue_script('aldehyde-timeago', get_template_directory_uri() . '/js/jquery.timeago.js', array('jquery') );
-	
+	wp_enqueue_script( 'aldehyde-custom-script-js', get_template_directory_uri() . '/js/custom-script.js', array('jquery') );
 	if ( (function_exists( 'of_get_option' )) && (of_get_option('slider_enabled') != 0) ) {
 		wp_enqueue_script( 'aldehyde-nivo-slider', get_template_directory_uri() . '/js/nivo.slider.js', array('jquery') );
 	}

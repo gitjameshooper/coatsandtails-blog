@@ -220,11 +220,7 @@ a:active {
 #site-navigation .menu li > a:only-child:after {
   content: '';
 }
-#site-navigation .current_page_item > a {
-  background: #eeeeee;
-  border-top: solid 3px #222;
-  padding-top: 12px;
-}
+ 
 #site-navigation ul {
   list-style: none;
   margin: 0;
@@ -258,12 +254,7 @@ a:active {
   color: #555;
   padding: 8px 20px;
 }
-#site-navigation ul ul a:hover {
-  border-top: none;
-  background: #333;
-  color: #eee;
-  padding: 8px 20px;
-}
+ 
 #site-navigation li {
   float: left;
   position: relative;
@@ -276,22 +267,9 @@ a:active {
   padding: 16px 15px;
   font-weight: normal;
 }
-#site-navigation a:hover {
-  background: #f3f3f3;
-  border-top: #0C9 solid 4px;
-}
-#site-navigation li:hover > a {
-  background: #eeeeee;
-  border-top: #89db52 solid 4px;
-  padding-top: 12px;
-  color: black;
-}
-#site-navigation ul ul li:hover > a {
-  background: #ffffff;
-  border-top: none;
-  padding: 8px 20px;
-  color: black;
-}
+ 
+ 
+ 
 /* Small menu */
 .menu-toggle {
   display: none;
