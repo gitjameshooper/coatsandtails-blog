@@ -51,7 +51,7 @@
 		</nav><!-- #site-navigation -->
 	  </div>
 	  <div id="social-icons" class="col-md-6">
-	  	    <a href="http://www.coatandtails.com/cart.php" id="cart_link"><img src="https://s3.amazonaws.com/coatandtails/img/cart-icon.png"></a>
+	  	    <a href="http://www.coatandtails.com/cart.php" id="cart-link"><img src="https://s3.amazonaws.com/coatandtails/img/cart-icon.png"></a>
 		    <span class="divider"></span>
 		    <?php if ( of_get_option('facebook', true) != "") { ?>
 			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><img src="https://s3.amazonaws.com/coatandtails/img/facebook.png"></a>
