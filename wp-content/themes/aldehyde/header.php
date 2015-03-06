@@ -31,7 +31,7 @@
 		<?php if((of_get_option('logo', true) != "") && (of_get_option('logo', true) != 1) ) { ?>
 			<h1 class="logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<?php
-			echo "<img class='main_logo' src='".of_get_option('logo', true)."' title='".esc_attr(get_bloginfo( 'name','display' ) )."'></a></h1>";	
+			echo "<img class='main_logo' src='https://s3.amazonaws.com/coatandtails/img/logo.png' title='".esc_attr(get_bloginfo( 'name','display' ) )."'></a></h1>";	
 			}
 		else { ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> 
@@ -51,7 +51,7 @@
 		</nav><!-- #site-navigation -->
 	  </div>
 	  <div id="social-icons" class="col-md-6">
-	  	    <a href="http://www.coatandtails.com/cart.php" id="cart_link"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sc-icon.png"></a>
+	  	    <a href="http://www.coatandtails.com/cart.php" id="cart_link"><img src="https://s3.amazonaws.com/coatandtails/img/cart-icon.png"></a>
 		    <span class="divider"></span>
 		    <?php if ( of_get_option('facebook', true) != "") { ?>
 			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><img src="https://s3.amazonaws.com/coatandtails/img/facebook.png"></a>
