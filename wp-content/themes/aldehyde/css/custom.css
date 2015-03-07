@@ -129,7 +129,7 @@ display: none;
   color: #333;
   white-space: nowrap;
  }
-a[title="contact"]{
+a[title="contact"], a[title="terms"]{
  	cursor: pointer;
  }
 #site-navigation ul#menu-header-menu >  li.current_page_item > a {
@@ -188,17 +188,18 @@ float: left;
 #social-icons #cart-link img{
 height: 20px ;
   }
-.cover-banner {
-
-     position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  margin-right: 0;
+.cover-banner {    
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: auto;
+  left: 50%;
+  overflow: hidden;
 }
 .cover-banner img{
-display: none;
-	}
+  display: none;
+  height: 100%;
+}
 
 
 @media screen and (max-width: 990px) { 

@@ -275,7 +275,7 @@ a:active {
   display: none;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block;
@@ -347,7 +347,7 @@ div.slide-description {
 .nivo-imageLink {
   z-index: 99999;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   div.slide-title {
     font-size: 18px;
   }
