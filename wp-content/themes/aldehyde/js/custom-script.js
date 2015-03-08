@@ -1,5 +1,13 @@
 jQuery( document ).ready( function( $ ) {
 
+	 
+	$('.toggle-button').on('click',function(){
+        $('body').toggleClass('mobile-device');     
+	});
+	$('.mobile-nav ul.menu > li > a').on('click',function(){
+			$(this).parent().toggleClass('show-list'); 
+	});
+
 	$('#menu-header-menu > li.menu-item').hover(function(){
 		var menuHeight = $(this).find('.sub-menu').height();
           $('.gray-area').height(menuHeight);

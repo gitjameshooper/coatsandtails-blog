@@ -27,7 +27,7 @@
 	
 	  
 	<header class="site-header row" role="banner">
-		<div class="site-branding col-md-4">
+		<div class="site-branding">
 		<?php if((of_get_option('logo', true) != "") && (of_get_option('logo', true) != 1) ) { ?>
 			<h1 class="logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<?php
@@ -38,55 +38,62 @@
 		<?php	
 		}
 		?>
-		</div>
 		
-	  <div class="default-nav-wrapper col-md-8 col-xs-12"> 	
+		</div>
+		<div class="toggle-button"></div>
+		
+	  <div class="default-nav-wrapper"> 	
 	   <nav id="site-navigation" class="main-navigation" role="navigation">
          <div id="nav-container">
-			<h1 class="menu-toggle"></h1>
+			
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'aldehyde' ); ?>"><?php _e( 'Skip to content', 'aldehyde' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
           </div>
 		</nav><!-- #site-navigation -->
-	  </div>
-	  <div id="social-icons" class="col-md-6">
-	  	    <a href="http://www.coatandtails.com/cart.php" id="cart-link"><img src="https://s3.amazonaws.com/coatandtails/img/cart-icon.png"></a>
-		    <span class="divider"></span>
-		    <?php if ( of_get_option('facebook', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><img src="https://s3.amazonaws.com/coatandtails/img/facebook.png"></a>
-             <?php } ?>
-             <?php if ( of_get_option('tumblr', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><img src="https://s3.amazonaws.com/coatandtails/img/tumblr.png"></a>
-             <?php } ?>
-             <?php if ( of_get_option('instagram', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><img src="https://s3.amazonaws.com/coatandtails/img/ig.png"></a>
-             <?php } ?>
-            <?php if ( of_get_option('twitter', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><img src="https://s3.amazonaws.com/coatandtails/img/twitter.png"></a>
-             <?php } ?>
-             <?php if ( of_get_option('google', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('google', true)); ?>" title="Google Plus" ><i class="social-icon icon-google-plus-sign"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('feedburner', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('feedburner', true)); ?>" title="RSS Feeds" ><i class="social-icon icon-rss-sign"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('pinterest', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('pinterest', true)); ?>" title="Pinterest" ><i class="social-icon icon-pinterest-sign"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('linkedin', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('linkedin', true)); ?>" title="LinkedIn" ><i class="social-icon icon-linkedin-sign"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('youtube', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('youtube', true)); ?>" title="YouTube" ><i class="social-icon icon-youtube-sign"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('flickr', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('flickr', true)); ?>" title="Flickr" ><i class="social-icon icon-flickr"></i></a>
-             <?php } ?>
-             <?php if ( of_get_option('dribble', true) != "") { ?>
-			 <a target="_blank" href="<?php echo esc_url(of_get_option('dribble', true)); ?>" title="Dribbble" ><i class="social-icon icon-dribbble"></i></a>
-             <?php } ?> 
+	  
+		  
 	    </div>
+	    <div class="mobile-nav">
+	    	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	    </div>
+	    <div id="social-icons">
+		  	    <a href="http://www.coatandtails.com/cart.php" id="cart-link"><img src="https://s3.amazonaws.com/coatandtails/img/cart-icon.png"></a>
+			    <span class="divider"></span>
+			    <?php if ( of_get_option('facebook', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><img src="https://s3.amazonaws.com/coatandtails/img/facebook.png"></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('tumblr', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('tumblr', true)); ?>" title="Tumblr" ><img src="https://s3.amazonaws.com/coatandtails/img/tumblr.png"></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('instagram', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('instagram', true)); ?>" title="Instagram" ><img src="https://s3.amazonaws.com/coatandtails/img/ig.png"></a>
+	             <?php } ?>
+	            <?php if ( of_get_option('twitter', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url("http://twitter.com/".of_get_option('twitter', true)); ?>" title="Twitter" ><img src="https://s3.amazonaws.com/coatandtails/img/twitter.png"></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('google', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('google', true)); ?>" title="Google Plus" ><i class="social-icon icon-google-plus-sign"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('feedburner', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('feedburner', true)); ?>" title="RSS Feeds" ><i class="social-icon icon-rss-sign"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('pinterest', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('pinterest', true)); ?>" title="Pinterest" ><i class="social-icon icon-pinterest-sign"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('linkedin', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('linkedin', true)); ?>" title="LinkedIn" ><i class="social-icon icon-linkedin-sign"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('youtube', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('youtube', true)); ?>" title="YouTube" ><i class="social-icon icon-youtube-sign"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('flickr', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('flickr', true)); ?>" title="Flickr" ><i class="social-icon icon-flickr"></i></a>
+	             <?php } ?>
+	             <?php if ( of_get_option('dribble', true) != "") { ?>
+				 <a target="_blank" href="<?php echo esc_url(of_get_option('dribble', true)); ?>" title="Dribbble" ><i class="social-icon icon-dribbble"></i></a>
+	             <?php } ?> 
+		    </div>
 	</header><!-- #masthead -->
 
 	

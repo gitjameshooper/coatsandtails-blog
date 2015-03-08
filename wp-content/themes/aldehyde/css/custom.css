@@ -7,7 +7,10 @@
 body #page{
  font-family: "IM Fell English","Helvetica Neue",Helvetica,Arial,sans-serif !important;
  }
-
+ 
+.mobile-nav{
+  display: none;
+}
  .row{
  	margin: 0;
  }
@@ -24,14 +27,32 @@ header.site-header.row {
 h1.logo-container {
 margin-top: 15px;
 }
-.default-nav-wrapper.col-md-8.col-xs-12 {
-width: auto;
-padding: 0;
-}
-.site-branding.col-md-4 {
-width: auto;
+.default-nav-wrapper {
+  float: left;
+  margin-left: 15px;
+  width: auto;
+  min-width: 595px;
 }
 
+.site-branding {
+width: auto;
+float: left;
+margin-left: 15px;
+
+}
+.toggle-button{
+background: url('https://s3.amazonaws.com/coatandtails/img/icons/icon-bars.png');
+background-position: center;
+height: 34px;
+width: 34px;
+display: none;
+  position: absolute;
+  right: 5px;
+  padding: 9px 5px;
+  top: 18px;
+  bottom: 18px;
+
+}
 .gray-area{
 	position: absolute;
 	z-index: 1;
@@ -152,8 +173,11 @@ background: #eee !important;
 
 
 #social-icons{
+
+     
 	width: auto;
-	  padding-left: 0;
+	  padding: 0 !important;
+    margin-right: 15px;
 }
 #social-icons a{
 margin: 0;
@@ -162,7 +186,7 @@ padding: 25px 4px;
 float: left;
 
 }
-#social-icons a:hover, #social-icons a:focus {
+#social-icons a:hover {
 text-decoration: none;
 background-color: #eee;
 }
@@ -201,21 +225,125 @@ height: 20px ;
   height: 100%;
 }
 
-
+@media screen and (max-width: 1100px) {
+  .default-nav-wrapper {
+       min-width: 505px;
+      
+  }
+ ul#menu-header-menu > li a{
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+    font-size: 17px !important;
+   
+  }
+  
+}
 @media screen and (max-width: 990px) { 
+  #site-navigation  {
+   
+  display: none;
+  }
+  .toggle-button{
+    display: block;
+    cursor: pointer;
+  }
  ul#menu-header-menu {
   
   margin: 11.25px 0 11.25px -10px;
   }
-}
-@media screen and (max-width: 1075px) {
- ul#menu-header-menu > li a{
-    padding-left: 9px;
-    padding-right: 9px;
+  .site-branding {
+  padding: 0;
+  font-size: 23px;
+  line-height: 25px;
+  height: auto;
+  display: block;
+  width: 260px;
+  float: none;
+  margin: auto;
+  position: relative;
+  left: -35px;
+  }
+  .featured-thumb{
+    display: none;
+  }
+  #social-icons {
+    display: none;
+  width: auto;
+  padding: 0 !important;
+  margin-right: 15px;
+  margin: 10px 0 0 10px;
+  }
+  .mobile-nav {
+   
+  padding: 0;
+  margin-top: 27px;
+  }
+  .mobile-device #social-icons, .mobile-device .mobile-nav{
+    display: block;
+  }
+  .mobile-nav ul  {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   
+  }
+  .mobile-nav ul li {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    
     font-size: 17px;
   }
+  .mobile-nav ul li a, .mobile-nav ul li a:hover {
+    color: #000;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 2px;
+  display: inline-block;
+  margin-top: 1px;
+  }
+  .mobile-nav ul ul.sub-menu li a, .mobile-nav ul ul.sub-menu  li a:hover {
+  color: #333;
+   
+ }
+  .mobile-nav .sub-menu  a[title="submenu-title"] {
+    cursor: default;
+    color: #333;
+    font-size: 18px !important;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 0;
+      margin-left: -10px;
+    white-space: nowrap;
+  }
+  .mobile-nav ul.sub-menu {
+    display: none;
+  }
   
+
+  .mobile-nav ul.sub-menu li {
+   
+    text-decoration: none;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+  }
+  .mobile-nav ul.menu li ul.sub-menu{
+     
+   
+  margin-top: 10px;
+  }
+  .cover-banner{
+    display: none !important;
+  }
+  .mobile-nav ul.menu > li.show-list ul.sub-menu{
+     display: block;
+  }
 }
+
 
 /* Blog Content */
 
@@ -229,10 +357,17 @@ padding: 5px;
 margin-top: 0px;
 }
 
-a:hover, a:focus, a:active {
+#content a:hover, #content a:focus, #content a:active {
 color: #333;
 }
 
+#secondary .widget_search input[type=text] {
+  display: block;
+  width: 230px !important;
+  position: relative;
+  left: 5px;
+  top: 1px;
+}
 #content {
   
   border-top: 0;
@@ -476,4 +611,48 @@ footer .copyright{
   padding: 10px 16px;
   text-align: center;
   box-shadow: none;
+}
+
+@media screen and (max-width: 400px) {
+  .site-branding {
+    padding: 0;
+    line-height: 25px;
+    height: auto;
+    display: block;
+    width: 67%;
+    float: none;
+    margin: auto;
+    position: relative;
+    left: -10%;
+  }
+
+  h1.logo-container {
+    margin-top: 6%;
+  }
+  .main_logo {
+    max-width: 100%;
+  }
+  .widget_search .search-submit {
+  display: inline-block;
+  padding: 4px 12px;
+  float: left;
+}
+#secondary .widget_search input[type=text] {
+  display: inline-block;
+  width: 79% !important;
+  position: relative;
+  left: 5px;
+  top: 1px;
+  min-width: 0px !important;
+  float: left;
+}
+#secondary .widget_search label {
+   
+   display: block;
+  
+  width: auto;
+}
+  .screen-reader-text{
+    display: none;
+  }
 }
