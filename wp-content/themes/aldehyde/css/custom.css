@@ -613,6 +613,12 @@ footer .copyright{
   box-shadow: none;
 }
 
+@media screen and (max-width: 990px) {
+#secondary {
+  padding: 20px 10px;
+  clear: both;
+}
+}
 @media screen and (max-width: 400px) {
   .site-branding {
     padding: 0;
