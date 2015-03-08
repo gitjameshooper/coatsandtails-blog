@@ -27,12 +27,9 @@ jQuery( document ).ready( function( $ ) {
            		$(this).attr('data-img', title);
            		$(this).attr('title','');
            }
-            
-            
          
 	});
-	 
-
+	  
 	$('.sub-menu > li > a').hover(function(){
 
 			if(typeof $(this).attr('data-img') !== "undefined"){
