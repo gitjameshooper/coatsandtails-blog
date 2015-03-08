@@ -1,21 +1,30 @@
 jQuery( document ).ready( function( $ ) {
 
-	 
+
 	$('.toggle-button').on('click',function(){
-        $('body').toggleClass('mobile-device');     
+		if(!$('body').hasClass('mobile-device')){
+			$('body').addClass('mobile-device'); 
+			 $('.mobile-nav ul.menu > li > a').each(function(){
+	 		     $(this).attr('href', 'javascript:void(0);');
+	 		});
+		}else if($('body').hasClass('mobile-device')){
+			$('body').removeClass('mobile-device'); 
+		}
+           
 	});
 	$('.mobile-nav ul.menu > li > a').on('click',function(){
 			$(this).parent().toggleClass('show-list'); 
 	});
-
+		// add gray area
 	$('#menu-header-menu > li.menu-item').hover(function(){
 		var menuHeight = $(this).find('.sub-menu').height();
           $('.gray-area').height(menuHeight);
 	},function(){
 		 $('.gray-area').height(0);
 	});
-	$('.sub-menu').append('<div class="cover-banner"><img src="" /></div>');
+	
 	 
+	 // check title attribute for special cases
 	$('.sub-menu > li > a').each(function(){
            var title = $(this).attr('title');
 
@@ -29,7 +38,8 @@ jQuery( document ).ready( function( $ ) {
            }
          
 	});
-	  
+	  // add cover banner from submenu item
+	  $('.sub-menu').append('<div class="cover-banner"><img src="" /></div>');
 	$('.sub-menu > li > a').hover(function(){
 
 			if(typeof $(this).attr('data-img') !== "undefined"){
