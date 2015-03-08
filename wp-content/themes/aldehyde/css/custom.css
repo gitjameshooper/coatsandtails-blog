@@ -46,6 +46,7 @@ height: 34px;
 width: 34px;
 display: none;
   position: absolute;
+    z-index: 1000;
   right: 5px;
   padding: 9px 5px;
   top: 18px;
