@@ -50,8 +50,10 @@ jQuery( document ).ready( function( $ ) {
 		}
 		$.ajax({
 			url:  "http://www.coatandtails.com/services/get_t_and_c.php",
-			success:function(h){
-				 
+			crossDomain: true,
+    		 
+    		 success:function(h){
+				  
 				var payload = '<div class="modal fade" id="overlay_modal" tabindex="-1" role="dialog" aria-hidden="true">'
 						+ '<div class="modal-dialog modal-sm">'
 							+ '<div class="modal-content">'

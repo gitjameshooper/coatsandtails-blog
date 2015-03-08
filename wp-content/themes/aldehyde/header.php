@@ -15,7 +15,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="http://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet" type="text/css">
-<link rel="icon" href="https://s3.amazonaws.com/coatandtails/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://s3.amazonaws.com/coatandtails/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://s3.amazonaws.com/coatandtails/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://s3.amazonaws.com/coatandtails/img/favicon.ico" type="image/x-icon">
 <meta http-equiv="X-Frame-Options" content="DENY"><link href="http://www.coatandtails.com/index.php" rel="canonical">
 <?php wp_head(); ?>
 </head>
