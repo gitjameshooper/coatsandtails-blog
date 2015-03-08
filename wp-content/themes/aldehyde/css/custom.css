@@ -97,6 +97,7 @@ margin-left: -2px;
 font-size: 18px;
 line-height: 25px;
 font-weight: normal;
+  cursor: pointer;
 }
  
 #site-navigation li:hover > a{
@@ -300,9 +301,11 @@ height: 20px ;
   margin-left: 2px;
   display: inline-block;
   margin-top: 1px;
+    cursor: pointer;
   }
   .mobile-nav ul ul.sub-menu li a, .mobile-nav ul ul.sub-menu  li a:hover {
   color: #333;
+   
    
  }
   .mobile-nav .sub-menu  a[title="submenu-title"] {

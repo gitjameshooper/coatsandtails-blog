@@ -142,7 +142,7 @@ jQuery( document ).ready( function( $ ) {
 			}else{
 				$.ajax({
 					type: "POST",
-					url: window.init.base_url + "http://www.coatandtails.com/services/send_message.php",
+					url: "http://www.coatandtails.com/services/send_message.php",
 					data: {
 						name: message_name,
 						email: message_email,
