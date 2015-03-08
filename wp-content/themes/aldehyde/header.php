@@ -29,7 +29,7 @@
 	<header class="site-header row" role="banner">
 		<div class="site-branding">
 		<?php if((of_get_option('logo', true) != "") && (of_get_option('logo', true) != 1) ) { ?>
-			<h1 class="logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<h1 class="logo-container"><a href="http://www.coatandtails.com" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<?php
 			echo "<img class='main_logo' src='https://s3.amazonaws.com/coatandtails/img/logo.png' title='".esc_attr(get_bloginfo( 'name','display' ) )."'></a></h1>";	
 			}
