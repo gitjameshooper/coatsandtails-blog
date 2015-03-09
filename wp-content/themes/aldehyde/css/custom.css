@@ -382,7 +382,7 @@ color: #333;
 .widget_search .search-submit {
   display: inline-block;
   padding: 4px 12px;
-  
+  float: left;
 }
 
 #commentform input#submit{ 
